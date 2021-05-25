@@ -1,0 +1,33 @@
+<div class="container">
+<div class="btn-group btn-group-toggle">
+        <p>Choose your View</p>
+		<div><button type="button" class="btn btn-outline-primary" 
+        (click)="showGrid()"><span class="material-icons">
+grid_view
+</span></button>
+<button type="button" class="btn btn-outline-primary" (click)="showGrid()"><span class="material-icons">
+list
+</span>
+</button>
+</div>
+	</div>
+<div class="products row mt-2">
+
+
+    <div class="product" *ngFor="let item of products" [ngClass]="grid ? 'col-4' : 'col-12'">
+        <div>
+            
+            <img class="img" src={{item.image}}>
+            <div class="content">{{item.title}}</div>
+            <p class="content"> ₹ <strong>{{item.price}}</strong></p>
+            <button type="button" class="btn btn-outline-primary add-cart-button" *ngIf="item.itemadded" (click)="removeFromCart(item)">-</button>
+            <button type="button" class="btn btn-outline-primary add-cart-button" [disabled]="item.itemadded" (click)="addToCart(item)">Add to cart</button>
+            <button type="button" class="btn btn-outline-primary add-cart-button" *ngIf="item.itemadded" [disabled]="(getLeft(item.id) == 0) ||(getItemCount(item.id) == item.limit)"  (click)="addToCart(item)">+</button>
+            <div *ngIf="getItemCount(item.id) == item.limit" class="alert-text">{{item.limit}} per order only.</div>
+            <div *ngIf="getLeft(item.id) == 1" class="alert-text">Only 1 piece left.</div>
+            <br><span>Item Added: {{getItemCount(item.id)}}</span><br>
+        </div>
+    </div>
+
+</div>
+</div>

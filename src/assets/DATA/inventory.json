@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "availbility":6,
+        "addedCount" : 0
+    },
+     {   
+        "id": 2,
+         "availbility":2,
+         "addedCount" : 0
+     },
+     {
+        "id": 3,
+         "availbility":16,
+         "addedCount" : 0
+     },
+     {   
+        "id": 4, 
+          "availbility":14,
+          "addedCount" : 0
+     },
+     {    "id": 5, 
+          "availbility":10,
+          "addedCount" : 0
+     }
+]

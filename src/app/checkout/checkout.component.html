@@ -1,0 +1,10 @@
+<div class="products row mt-2 container">
+
+    <div class="product" *ngFor="let item of products" [ngClass]="grid ? 'col-4' : 'col-12'">
+        <div *ngIf="getPrice(item)>0">
+        <div>- {{getName(item.id)}} * {{item.addedCount}}</div>
+        <div>price : {{getPrice(item)}}</div>
+        </div>
+    </div>
+<p>Total : {{getTotalSum()}}</p>
+</div>

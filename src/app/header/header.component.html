@@ -1,0 +1,17 @@
+<div class="header">
+    <nav class="header_top">
+      <div class="header_menu">
+        <div class="header_menu_icon" routerLink="/">
+          <span class="material-icons">menu</span>
+          <span class="welcome">Welcome to my Cart.....</span>
+        </div>
+        <div class="header_menu_cart">
+            <span class="material-icons" (click)="checkout()">shopping_cart</span>
+            <p *ngIf="" class="header_cart_number">{{count}}</p>
+            <p *ngIf="count>0" class="header_cart_number">{{count}}</p>
+        </div>
+      </div>
+    </nav>
+  
+  
+  </div>
