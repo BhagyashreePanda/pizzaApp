@@ -18,8 +18,8 @@ export class DataApiService {
         localStorage.setItem('counter',this.counter);
     }
     resetCount(){
-      this.count.next(0);
-      debugger;
+      this.counter = 0;
+      this.count.next(this.counter);
       localStorage.setItem('counter',this.counter);
     }
     prevCount() {

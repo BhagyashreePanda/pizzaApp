@@ -1,6 +1,17 @@
 <div class="container">
   <div class="row">
+    <div class="col-10">
+    </div>
+    <div class="col-2">
+      <button type="button" class="btn-outline-primary btn-add" (click)="addNewItem()">
+        <span>Add new item</span>
+        </button>
+    </div>
+   <div *ngIf = "showLabel">
+    <marquee><span class="marque-basic">This ifacility isnot yet implemented. Kindly add items in database.</span></marquee>
+   </div>
     <div class="col-12">
+      
       <table class="table table-bordered">
         <thead>
           <tr>

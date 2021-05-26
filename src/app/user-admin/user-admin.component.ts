@@ -9,10 +9,20 @@ import { DataApiService } from '../services/data-api.service';
 })
 export class UserAdminComponent implements OnInit {
 inventory: any = [];
+showLabel: boolean = false;
+newItem : any = {}
   
   constructor(private api: DataApiService, private router: Router) { }
   viewDetail(id){
     this.router.navigateByUrl(`/item-detail/${id}`);
+    for(let i = 0; i<this.inventory.length; i++){
+      if(this.inventory[i].id == id){
+        localStorage.setItem('active-item', JSON.stringify(this.inventory[i]));
+      }
+    }
+  }
+  addNewItem(){
+    this.showLabel = true;
   }
   addItem(id){
     for(let i = 0; i<this.inventory.length; i++){
@@ -41,13 +51,10 @@ inventory: any = [];
 
   }
     ngOnInit(): void {
-    this.inventory = localStorage.getItem('detailPresent');
-    
-    if(!this.inventory) {
+   // this.inventory = localStorage.getItem('detailPresent');
       this.api.getJInventory().subscribe(response=>{
         this.inventory = response;
       })
     }
-  }
 
 }

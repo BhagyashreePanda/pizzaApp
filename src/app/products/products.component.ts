@@ -11,10 +11,16 @@ export class ProductsComponent implements OnInit {
   cart:any =[];
   @Input() detailPresent:any = [];
   grid = true;
+  counter:any ;
   constructor(private api: DataApiService) { }
 
   ngOnInit(): void {
+    this.counter = localStorage.getItem('count');
+    if(!this.counter){
+      this.api.resetCount();
+      }
     this.cart = localStorage.getItem('shopping_cart') ? localStorage.getItem('shopping_cart') : [];
+    
   }
 
   addToCart(item:any){
@@ -34,6 +40,9 @@ export class ProductsComponent implements OnInit {
    
     localStorage.setItem('products', JSON.stringify(this.products));
      localStorage.setItem('detailPresent', JSON.stringify(this.detailPresent));
+     if(!localStorage.getItem('count')){
+       this.api.resetCount();
+     }
         this.api.nextCount();
   }
    removeFromCart(item:any){
