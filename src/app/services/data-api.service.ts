@@ -17,6 +17,11 @@ export class DataApiService {
         this.count.next(++this.counter);
         localStorage.setItem('counter',this.counter);
     }
+    resetCount(){
+      this.count.next(0);
+      debugger;
+      localStorage.setItem('counter',this.counter);
+    }
     prevCount() {
         this.count.next(--this.counter);
          localStorage.setItem('counter',this.counter)

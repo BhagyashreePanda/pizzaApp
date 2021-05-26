@@ -1,1 +1,6 @@
-<app-products [products] ="items" [detailPresent]="inventory"></app-products>
+<div *ngIf="user == 'store'">
+    <app-products [products] ="items" [detailPresent]="inventory"></app-products>
+</div>
+<div *ngIf="user == 'admin'">
+    <app-user-admin></app-user-admin>
+</div>

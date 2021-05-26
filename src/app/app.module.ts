@@ -10,6 +10,9 @@ import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
+import { UserAdminComponent } from './user-admin/user-admin.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { CheckoutComponent } from './checkout/checkout.component';
     HomeComponent,
     HeaderComponent,
     ProductsComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    UserAuthComponent,
+    UserAdminComponent,
+    ItemDetailsComponent
   ],
   imports: [
     BrowserModule,

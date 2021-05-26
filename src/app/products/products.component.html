@@ -18,7 +18,8 @@ list
         <div>
             
             <img class="img" src={{item.image}}>
-            <div class="content">{{item.title}}</div>
+            <h4 class="content">{{item.title}}</h4>
+            <div class="content">{{item.desc}}</div>
             <p class="content"> ₹ <strong>{{item.price}}</strong></p>
             <button type="button" class="btn btn-outline-primary add-cart-button" *ngIf="item.itemadded" (click)="removeFromCart(item)">-</button>
             <button type="button" class="btn btn-outline-primary add-cart-button" [disabled]="item.itemadded" (click)="addToCart(item)">Add to cart</button>

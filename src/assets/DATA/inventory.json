@@ -1,26 +1,37 @@
 [
     {
         "id": 1,
+        "name": "Pizza Farmhouse",
         "availbility":6,
-        "addedCount" : 0
+        "addedCount" : 0,
+        "price": 450.00
     },
      {   
         "id": 2,
+        "name": "Pizza pepperoni",
          "availbility":2,
-         "addedCount" : 0
+         "addedCount" : 0,
+         "price": 488.00
+
      },
      {
         "id": 3,
+        "name": "Pizza Veg -  carrot and basil (Our special)",
          "availbility":16,
-         "addedCount" : 0
+         "addedCount" : 0,
+         "price": 428.88
      },
      {   
         "id": 4, 
+        "name": "Pizza Veg Extravegganzaa",
           "availbility":14,
-          "addedCount" : 0
+          "addedCount" : 0,
+          "price": 530.00
      },
      {    "id": 5, 
+        "name": "Pizza - meatball delight",
           "availbility":10,
-          "addedCount" : 0
+          "addedCount" : 0,
+          "price": 554.36
      }
 ]

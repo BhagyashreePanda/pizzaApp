@@ -25,9 +25,13 @@
 }
 .header_menu_cart{
     display: flex;
+    justify-content: end;
     margin-top: 10px;
     margin-left: 60%;
     height: 50px;
+}
+.header_menu_cart div{
+justify-content: right;
 }
 .header_cart_number{
     color: #febd69;
@@ -37,4 +41,12 @@
 .welcome{
     margin-left: 1em;
     font-size: 40px;
+}
+.log-out{
+    margin-left: 1em;
+    
+}
+a {
+    color: inherit;
+    cursor: pointer;
 }

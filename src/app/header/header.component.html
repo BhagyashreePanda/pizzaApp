@@ -3,12 +3,17 @@
       <div class="header_menu">
         <div class="header_menu_icon" routerLink="/">
           <span class="material-icons">menu</span>
-          <span class="welcome">Welcome to my Cart.....</span>
+          <span class="welcome">Welcome to Pizzeria.....</span>
         </div>
         <div class="header_menu_cart">
-            <span class="material-icons" (click)="checkout()">shopping_cart</span>
-            <p *ngIf="" class="header_cart_number">{{count}}</p>
+            <span *ngIf="count>0" class="material-icons" (click)="checkout()">shopping_cart</span>
             <p *ngIf="count>0" class="header_cart_number">{{count}}</p>
+            <div><a title="LogOut" class="log-out" (click)="logOut()"><span class="material-icons">
+              logout
+              </span></a></div>
+        </div>
+        <div>
+          
         </div>
       </div>
     </nav>
