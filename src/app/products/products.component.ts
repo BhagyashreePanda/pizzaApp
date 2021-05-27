@@ -16,9 +16,9 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.counter = localStorage.getItem('count');
-    if(!this.counter){
-      this.api.resetCount();
-      }
+    // if(!this.counter){
+    //   this.api.resetCount();
+    //   }
     this.cart = localStorage.getItem('shopping_cart') ? localStorage.getItem('shopping_cart') : [];
     
   }
@@ -40,9 +40,9 @@ export class ProductsComponent implements OnInit {
    
     localStorage.setItem('products', JSON.stringify(this.products));
      localStorage.setItem('detailPresent', JSON.stringify(this.detailPresent));
-     if(!localStorage.getItem('count')){
-       this.api.resetCount();
-     }
+    //  if(!localStorage.getItem('count')){
+    //    this.api.resetCount();
+    //  }
         this.api.nextCount();
   }
    removeFromCart(item:any){
